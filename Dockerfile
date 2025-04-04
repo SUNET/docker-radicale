@@ -3,6 +3,7 @@ FROM debian:bookworm-slim AS build
 
 RUN apt-get update && apt-get install -y \
     git \
+    python3-mysqldb \
     radicale \
     python3-radicale-dovecot-auth \
     python3-pip
