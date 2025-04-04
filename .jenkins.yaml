@@ -1,0 +1,15 @@
+---
+environment_variables:
+  RADICALE_VERSION: "3.1.8-1"
+git:
+  branch: main
+triggers:
+  cron: "@daily"
+clean_workspace: true
+builders:
+  - docker
+docker_name: mail/radicale
+docker_tags:
+  - "${RADICALE_VERSION}"
+  - "latest"
+docker_no_cache: true
